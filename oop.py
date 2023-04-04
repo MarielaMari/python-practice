@@ -2,7 +2,7 @@
 
 class PlayerCharacter:
     def __init__(self, name, age):
-        self.name = name
+        self.name = name #attributes, unique, dynamic
         self.age = age
 
     def run(self):
@@ -13,5 +13,5 @@ class PlayerCharacter:
 player1 = PlayerCharacter("Cindy", 33)
 player2 = PlayerCharacter("Tommy", 26)
 print()
-print(player1.name)
-print(player2.name)
+print(player1)
+print(player2)
