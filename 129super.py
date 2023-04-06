@@ -1,10 +1,17 @@
+# Using Super() allows us to refer to User and not worry about passing self!
+
 class User():
+    def __init__(self, email):
+        self.email = email
+
     def sign_in(self):
         print('logged in')
 
 
 class Wizard(User):
-    def __init__(self, name, power):
+    def __init__(self, name, power, email):
+        # User.__init__(self, email) #This is one way of doing it
+        super().__init__(email)  # Second way is using SUPER() ...
         self.name = name
         self.power = power
 
@@ -21,9 +28,7 @@ class Archer(User):
         print(f'attacking with arrows: arrows left- {self.num_arrows}')
 
 
-wizard1 = Wizard('Merlin', 50)
-archer1 = Archer('Robin', 100)
-wizard1.attack()
-archer1.attack()
+wizard1 = Wizard('Merlin', 60, 'merlin@gmail.com')
 
 print(isinstance(wizard1, object))
+print(wizard1.email)
