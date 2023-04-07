@@ -1,4 +1,4 @@
-# Map - very useful, simplifies code
+#filter()
 
 my_list = [1, 2, 3]
 
