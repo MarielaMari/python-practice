@@ -1,4 +1,4 @@
-# Map - very useful, simplifies code
+# Map - very useful, simplifies code; IT IS A HIGHER ORDER FUNCTION (because it accepts another function in its parameter)
 
 my_list = [1, 2, 3]
 
