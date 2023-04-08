@@ -20,3 +20,10 @@ my_dict = {key: value**2 for key, value in simple_dict.items() if value %
            2 == 0}
 
 print("\n ---Dictionary Comprehensions: \n", my_dict)
+
+dict_2 = {}
+
+print('\n ---Convert a List to a Dictionary Exercise---')
+list_to_dict = {num: num*2 for num in [1, 2, 3]}
+
+print('\n', list_to_dict)
