@@ -4,14 +4,19 @@ user1 = {
     'valid': True
 }
 
+
 def authenticated(fn):
-  def wrapper(*args, **kwargs):
-    if args[0]['valid']:
-        return fn(*args, **kwargs)
-  return wrapper
+    def wrapper(*args, **kwargs):
+        if args[0]['valid']:
+            return fn(*args, **kwargs)
+        else:
+            print('Uknown user')
+    return wrapper
+
 
 @authenticated
 def message_friends(user):
     print('"Message has been sent."')
+
 
 message_friends(user1)
