@@ -4,7 +4,8 @@ import script
 
 
 class TestMain(unittest.TestCase):
-    #setUp is useful if you need to set up something before EACH function. 
+    # setUp is useful if you need to set up something before EACH function.
+    # python -m unittest -v is the command to run SetUp and tearDown
     def setUp(self):
         print('about to test a function')
 
@@ -33,6 +34,11 @@ class TestMain(unittest.TestCase):
         test_param = ''
         result = script.do_stuff(test_param)
         self.assertEqual(result, "_please, enter a number_")
+
+# tearDown is used if need to add something after each function
+# python -m unittest -v is the command to run SetUp and tearDown
+    def tearDown(self):
+        print('cleaning up')
 
 
 if __name__ == '__main__':
