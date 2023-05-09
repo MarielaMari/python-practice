@@ -22,6 +22,10 @@ class TestMain(unittest.TestCase):
         test_param = None
         result = main.do_stuff(test_param)
         self.assertEqual(result, "_please, enter a number_")
+    def test_do_stuff_4(self):
+        test_param = ''
+        result = main.do_stuff(test_param)
+        self.assertEqual(result, "_please, enter a number_")
 
 if __name__ == '__main__':
     unittest.main()
